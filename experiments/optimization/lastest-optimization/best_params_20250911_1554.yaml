@@ -24,15 +24,9 @@ train:
   img_size: 384
   batch_size: 16
   use_advanced_augmentation: true
-<<<<<<<< HEAD:experiments/optimization/20250911/20250911_1615_convnext_base_384_fold_1/best_params_20250911_1615.yaml
-  epochs: 50
-  lr: 0.004577864072976175
-  weight_decay: 0.05976234119970838
-========
   epochs: 100
   lr: 1.3104860929150744e-05
   weight_decay: 0.06842663606150821
->>>>>>>> 0cf2a545ea79915f5b670ec4cf7d190b1fb15c96:configs/train_optimized_20250911_1554.yaml
   optimizer: adamw
   scheduler: cosine
   warmup_epochs: 10
@@ -49,11 +43,7 @@ train:
   ema_decay: 0.9999
   temperature_scaling: true
   dropout_rate: 0.2
-<<<<<<<< HEAD:experiments/optimization/20250911/20250911_1615_convnext_base_384_fold_1/best_params_20250911_1615.yaml
-  dropout: 0.07023776699569574
-========
   dropout: 0.11097181031346946
->>>>>>>> 0cf2a545ea79915f5b670ec4cf7d190b1fb15c96:configs/train_optimized_20250911_1554.yaml
 model:
   name: convnext_base_384
   pretrained: true
@@ -74,8 +64,4 @@ wandb:
   - mixup
   - hard-aug
 training:
-<<<<<<<< HEAD:experiments/optimization/20250911/20250911_1615_convnext_base_384_fold_1/best_params_20250911_1615.yaml
-  batch_size: 90
-========
   batch_size: 48
->>>>>>>> 0cf2a545ea79915f5b670ec4cf7d190b1fb15c96:configs/train_optimized_20250911_1554.yaml

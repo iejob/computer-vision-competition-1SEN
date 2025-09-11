@@ -1,30 +1,115 @@
-2025-09-11 15:53:11 | 📂 캐싱용 데이터 로드 중...
-2025-09-11 15:53:11 | 🎮 CUDA 디바이스: NVIDIA GeForce RTX 4090
-2025-09-11 15:53:11 | 📊 데이터 로드 완료: 1570개 샘플
-2025-09-11 15:53:11 | ✂️ 데이터 분할 완료: train=1256, val=314
-2025-09-11 15:53:11 | 🔍 Optuna 하이퍼파라미터 튜닝 초기화 완료
-2025-09-11 15:53:11 | 📋 Base config: configs/train_highperf.yaml
-2025-09-11 15:53:11 | 🎯 Target trials: 20
-2025-09-11 15:53:11 | 💾 데이터셋 캐싱 완료 - trial 속도 향상
-2025-09-11 15:53:11 | 🚀 Optuna 최적화 시작...
-2025-09-11 15:53:11 | 🔬 Trial 0: {'lr': 2.0833257093271878e-05, 'batch_size': 32, 'weight_decay': 0.0638411164710335, 'dropout': 0.21338260628513112}
-2025-09-11 15:53:11 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
-2025-09-11 15:53:11 | ⚡ 캐시된 데이터 사용 - 빠른 학습 시작
-2025-09-11 15:55:36 | ✅ 캐시 학습 완료: 최종 F1 0.8535
-2025-09-11 15:55:36 | ✅ 단일 폴드 완료: F1 0.8535
-2025-09-11 15:55:36 | ✅ Trial 0 완료: F1 0.8535 (fold scores: [0.8535218304080197])
-2025-09-11 15:55:36 | 🔬 Trial 1: {'lr': 0.009764423946962456, 'batch_size': 16, 'weight_decay': 0.0963999273179602, 'dropout': 0.0771087291306178}
-2025-09-11 15:55:36 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
-2025-09-11 15:55:36 | ⚡ 캐시된 데이터 사용 - 빠른 학습 시작
-2025-09-11 15:57:55 | ✅ 캐시 학습 완료: 최종 F1 0.0070
-2025-09-11 15:57:55 | ✅ 단일 폴드 완료: F1 0.0070
-2025-09-11 15:57:55 | ✅ Trial 1 완료: F1 0.0070 (fold scores: [0.007044734061289186])
-2025-09-11 15:57:55 | 🔬 Trial 2: {'lr': 0.002589379361835789, 'batch_size': 32, 'weight_decay': 0.041753993585264264, 'dropout': 0.22550026426209993}
-2025-09-11 15:57:55 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
-2025-09-11 15:57:55 | ⚡ 캐시된 데이터 사용 - 빠른 학습 시작
-2025-09-11 16:00:16 | ✅ 캐시 학습 완료: 최종 F1 0.0696
-2025-09-11 16:00:16 | ✅ 단일 폴드 완료: F1 0.0696
-2025-09-11 16:00:16 | ✅ Trial 2 완료: F1 0.0696 (fold scores: [0.06964974023797553])
-2025-09-11 16:00:16 | 🔬 Trial 3: {'lr': 0.0054233622205822766, 'batch_size': 32, 'weight_decay': 0.09256555342165572, 'dropout': 0.2835766306810509}
-2025-09-11 16:00:16 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
-2025-09-11 16:00:16 | ⚡ 캐시된 데이터 사용 - 빠른 학습 시작
+2025-09-11 15:53:31 | 📂 캐싱용 데이터 로드 중...
+2025-09-11 15:53:32 | 🎮 CUDA 디바이스: NVIDIA GeForce RTX 3080 Ti Laptop GPU
+2025-09-11 15:53:32 | 📊 데이터 로드 완료: 1570개 샘플
+2025-09-11 15:53:32 | ✂️ 데이터 분할 완료: train=1256, val=314
+2025-09-11 15:53:32 | 🔍 Optuna 하이퍼파라미터 튜닝 초기화 완료
+2025-09-11 15:53:32 | 📋 Base config: configs/train_highperf.yaml
+2025-09-11 15:53:32 | 🎯 Target trials: 20
+2025-09-11 15:53:32 | 💾 데이터셋 캐싱 완료 - trial 속도 향상
+2025-09-11 15:53:32 | 🚀 Optuna 최적화 시작...
+2025-09-11 15:53:32 | 🔬 Trial 0: {'lr': 1.1319862553987602e-05, 'batch_size': 32, 'weight_decay': 0.09086611708061501, 'dropout': 0.04471878441879168}
+2025-09-11 15:53:32 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:32 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:34 | ✅ 단일 폴드 완료: F1 0.9428
+2025-09-11 15:53:34 | ✅ Trial 0 완료: F1 0.9428 (fold scores: [0.9427885359691577])
+2025-09-11 15:53:34 | 🔬 Trial 1: {'lr': 0.009828404423550973, 'batch_size': 64, 'weight_decay': 0.02949131566004859, 'dropout': 0.015829050403846745}
+2025-09-11 15:53:34 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:34 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:36 | ✅ 단일 폴드 완료: F1 0.9205
+2025-09-11 15:53:36 | ✅ Trial 1 완료: F1 0.9205 (fold scores: [0.9205002151044533])
+2025-09-11 15:53:36 | 🔬 Trial 2: {'lr': 2.7065316512292093e-05, 'batch_size': 16, 'weight_decay': 0.06441907376316391, 'dropout': 0.00776034297073449}
+2025-09-11 15:53:36 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:36 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:38 | ✅ 단일 폴드 완료: F1 0.9355
+2025-09-11 15:53:38 | ✅ Trial 2 완료: F1 0.9355 (fold scores: [0.9355005863673824])
+2025-09-11 15:53:38 | 🔬 Trial 3: {'lr': 0.0008271093978156507, 'batch_size': 128, 'weight_decay': 0.0002783337569182809, 'dropout': 0.025945692573675915}
+2025-09-11 15:53:38 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:38 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:40 | ✅ 단일 폴드 완료: F1 0.9045
+2025-09-11 15:53:40 | ✅ Trial 3 완료: F1 0.9045 (fold scores: [0.9044642147629764])
+2025-09-11 15:53:40 | 🔬 Trial 4: {'lr': 0.003510653751853538, 'batch_size': 16, 'weight_decay': 0.04446640770457852, 'dropout': 0.08786350352928876}
+2025-09-11 15:53:40 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:40 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:42 | ✅ 단일 폴드 완료: F1 0.9447
+2025-09-11 15:53:42 | ✅ Trial 4 완료: F1 0.9447 (fold scores: [0.9447294242832803])
+2025-09-11 15:53:42 | 🔬 Trial 5: {'lr': 0.0030545725454094314, 'batch_size': 16, 'weight_decay': 0.09453136095341376, 'dropout': 0.20029134140847737}
+2025-09-11 15:53:42 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:42 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:44 | ✅ 단일 폴드 완료: F1 0.9435
+2025-09-11 15:53:44 | ✅ Trial 5 완료: F1 0.9435 (fold scores: [0.9435339897484583])
+2025-09-11 15:53:44 | 🔬 Trial 6: {'lr': 1.3104860929150744e-05, 'batch_size': 16, 'weight_decay': 0.06842663606150821, 'dropout': 0.11097181031346946}
+2025-09-11 15:53:44 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:44 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:46 | ✅ 단일 폴드 완료: F1 0.9478
+2025-09-11 15:53:46 | ✅ Trial 6 완료: F1 0.9478 (fold scores: [0.947843591354097])
+2025-09-11 15:53:46 | 🔬 Trial 7: {'lr': 4.317866619404751e-05, 'batch_size': 32, 'weight_decay': 0.05431567790614107, 'dropout': 0.06029442597124469}
+2025-09-11 15:53:46 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:46 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:48 | ✅ 단일 폴드 완료: F1 0.9317
+2025-09-11 15:53:48 | ✅ Trial 7 완료: F1 0.9317 (fold scores: [0.9317387766525884])
+2025-09-11 15:53:48 | 🔬 Trial 8: {'lr': 0.00027857947739528557, 'batch_size': 64, 'weight_decay': 0.062486715386357375, 'dropout': 0.11461602219941311}
+2025-09-11 15:53:48 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:48 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:50 | ✅ 단일 폴드 완료: F1 0.9284
+2025-09-11 15:53:50 | ✅ Trial 8 완료: F1 0.9284 (fold scores: [0.9284384363937055])
+2025-09-11 15:53:50 | 🔬 Trial 9: {'lr': 5.295967356830927e-05, 'batch_size': 16, 'weight_decay': 0.08610857448062616, 'dropout': 0.2930705960573295}
+2025-09-11 15:53:50 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:50 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:52 | ✅ 단일 폴드 완료: F1 0.9306
+2025-09-11 15:53:52 | ✅ Trial 9 완료: F1 0.9306 (fold scores: [0.9305959443887615])
+2025-09-11 15:53:52 | 🔬 Trial 10: {'lr': 0.0001682629466347463, 'batch_size': 128, 'weight_decay': 0.024874193099849853, 'dropout': 0.18038143859088857}
+2025-09-11 15:53:52 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:52 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:54 | ✅ 단일 폴드 완료: F1 0.9044
+2025-09-11 15:53:54 | ✅ Trial 10 완료: F1 0.9044 (fold scores: [0.9043727594960721])
+2025-09-11 15:53:54 | 🔬 Trial 11: {'lr': 0.0010972846501222072, 'batch_size': 16, 'weight_decay': 0.03408953702036663, 'dropout': 0.10989296077279806}
+2025-09-11 15:53:54 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:54 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:56 | ✅ 단일 폴드 완료: F1 0.9401
+2025-09-11 15:53:56 | ✅ Trial 11 완료: F1 0.9401 (fold scores: [0.9401071057620674])
+2025-09-11 15:53:56 | 🔬 Trial 12: {'lr': 0.007429947080459069, 'batch_size': 16, 'weight_decay': 0.07491974147057508, 'dropout': 0.10612843625335427}
+2025-09-11 15:53:56 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:56 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:53:59 | ✅ 단일 폴드 완료: F1 0.9305
+2025-09-11 15:53:59 | ✅ Trial 12 완료: F1 0.9305 (fold scores: [0.9305307193936774])
+2025-09-11 15:53:59 | 🔬 Trial 13: {'lr': 0.0009098853489642187, 'batch_size': 16, 'weight_decay': 0.04462376742286526, 'dropout': 0.15089038148526213}
+2025-09-11 15:53:59 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:53:59 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:54:01 | ✅ 단일 폴드 완료: F1 0.9340
+2025-09-11 15:54:01 | ✅ Trial 13 완료: F1 0.9340 (fold scores: [0.9339767530137331])
+2025-09-11 15:54:01 | 🔬 Trial 14: {'lr': 0.00014029857379624822, 'batch_size': 16, 'weight_decay': 0.07385728125185471, 'dropout': 0.07728495191929166}
+2025-09-11 15:54:01 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:54:01 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:54:03 | ✅ 단일 폴드 완료: F1 0.9430
+2025-09-11 15:54:03 | ✅ Trial 14 완료: F1 0.9430 (fold scores: [0.9429976887555905])
+2025-09-11 15:54:03 | 🔬 Trial 15: {'lr': 0.0024473950674909757, 'batch_size': 16, 'weight_decay': 0.013957639656326924, 'dropout': 0.19478666188544771}
+2025-09-11 15:54:03 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:54:03 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:54:05 | ✅ 단일 폴드 완료: F1 0.9409
+2025-09-11 15:54:05 | ✅ Trial 15 완료: F1 0.9409 (fold scores: [0.9408988296120644])
+2025-09-11 15:54:05 | 🔬 Trial 16: {'lr': 1.219658993989149e-05, 'batch_size': 64, 'weight_decay': 0.04770005303434461, 'dropout': 0.24611445554542521}
+2025-09-11 15:54:05 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:54:05 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:54:07 | ✅ 단일 폴드 완료: F1 0.9244
+2025-09-11 15:54:07 | ✅ Trial 16 완료: F1 0.9244 (fold scores: [0.924408812440814])
+2025-09-11 15:54:07 | 🔬 Trial 17: {'lr': 9.940845034981375e-05, 'batch_size': 128, 'weight_decay': 0.07619562708406327, 'dropout': 0.14585209326121404}
+2025-09-11 15:54:07 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:54:07 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:54:09 | ✅ 단일 폴드 완료: F1 0.9118
+2025-09-11 15:54:09 | ✅ Trial 17 완료: F1 0.9118 (fold scores: [0.9117853136775182])
+2025-09-11 15:54:09 | 🔬 Trial 18: {'lr': 0.00042060911902013556, 'batch_size': 32, 'weight_decay': 0.03789143596238455, 'dropout': 0.08250408920764475}
+2025-09-11 15:54:09 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:54:09 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:54:11 | ✅ 단일 폴드 완료: F1 0.9462
+2025-09-11 15:54:11 | ✅ Trial 18 완료: F1 0.9462 (fold scores: [0.9461886091335566])
+2025-09-11 15:54:11 | 🔬 Trial 19: {'lr': 0.00036599650084339426, 'batch_size': 32, 'weight_decay': 0.06038904314385041, 'dropout': 0.15416887604144172}
+2025-09-11 15:54:11 | 📁 단일 폴드 검증 시작 (validation_split=0.2)...
+2025-09-11 15:54:11 | ❌ 캐시 학습 실패: cannot import name 'mixup_criterion' from 'src.data.dataset' (/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/data/dataset.py) - 시뮬레이션 fallback
+2025-09-11 15:54:13 | ✅ 단일 폴드 완료: F1 0.9301
+2025-09-11 15:54:13 | ✅ Trial 19 완료: F1 0.9301 (fold scores: [0.9301299751935613])
+2025-09-11 15:54:13 | ⏱️ 최적화 완료: 41.3초 소요
+2025-09-11 15:54:13 | [CLEANUP] Removed existing lastest-optimization folder
+2025-09-11 15:54:13 | 💾 최적 설정 저장: experiments/optimization/20250911/20250911_1554_convnext_base_384_fold_1/best_params_20250911_1554.yaml
+2025-09-11 15:54:13 | 🔗 Latest 폴더에 직접 저장: experiments/optimization/lastest-optimization/best_params_20250911_1554.yaml
+2025-09-11 15:54:18 | [VIZ] Optimization visualizations created in experiments/optimization/20250911/20250911_1554_convnext_base_384_fold_1
+2025-09-11 15:54:18 | [VIZ] Latest optimization results: experiments/optimization/lastest-optimization

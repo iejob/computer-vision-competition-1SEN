@@ -1,0 +1,8 @@
+2025-09-10 21:32:02 | 🚀 [PIPELINE] Full pipeline started
+2025-09-10 21:32:02 | 📋 Config: configs/train_optimized_20250910_2132.yaml
+2025-09-10 21:32:02 | ⚙️ Skip training: False
+2025-09-10 21:32:02 | ============================================================
+2025-09-10 21:32:02 | 🎯 [STAGE 1] HIGH-PERFORMANCE TRAINING
+2025-09-10 21:32:02 | ============================================================
+2025-09-10 21:57:23 | ❌ [PIPELINE] Failed: ('cannot represent an object', np.float64(0.8985203517690484))
+2025-09-10 21:57:23 | 🏁 [PIPELINE] Full pipeline ended
