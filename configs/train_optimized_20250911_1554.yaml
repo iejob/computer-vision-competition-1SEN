@@ -1,6 +1,6 @@
 project:
   run_name: convnext_base_384_fold_1
-  seed: 777
+  seed: 42
   date_format: '%Y%m%d'
   time_format: '%H%M'
   num_workers: 8
@@ -17,16 +17,16 @@ data:
   id_col: ID
   target_col: target
   num_classes: 17
-  folds: 2
-  valid_fold: 3
+  folds: 1
+  valid_fold: 0
   stratify: true
 train:
   img_size: 384
   batch_size: 16
   use_advanced_augmentation: true
-  epochs: 25
-  lr: 1.7512868545630953e-05
-  weight_decay: 0.053692798607568995
+  epochs: 100
+  lr: 1.3104860929150744e-05
+  weight_decay: 0.06842663606150821
   optimizer: adamw
   scheduler: cosine
   warmup_epochs: 10
@@ -36,14 +36,14 @@ train:
   use_mixup: true
   mixup_alpha: 0.8
   hard_augmentation: true
-  log_interval: 10
+  log_interval: 3
   early_stopping_patience: 20
   reduce_lr_patience: 10
   use_ema: true
   ema_decay: 0.9999
   temperature_scaling: true
   dropout_rate: 0.2
-  dropout: 0.01708295235162476
+  dropout: 0.11097181031346946
 model:
   name: convnext_base_384
   pretrained: true
@@ -64,4 +64,4 @@ wandb:
   - mixup
   - hard-aug
 training:
-  batch_size: 64
+  batch_size: 48
