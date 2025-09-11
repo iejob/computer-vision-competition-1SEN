@@ -1,0 +1,573 @@
+📋 실험명: fold-1-0910-2144-20250910_2144_convnext_base_384_ensemble_tta
+🔗 WandB URL: https://wandb.ai/kimsunmin0227-hufs/document-classification-team/runs/udresq7x
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/timm/models/_factory.py:117: UserWarning: Mapping deprecated model name convnext_base_384_in22ft1k to current convnext_base.fb_in22k_ft_in1k_384.
+  model = create_fn(
+2025-09-10 21:44:32 | [SINGLE-MODEL] All folds using model: convnext_base_384_in22ft1k
+2025-09-10 21:44:32 | [SCHEDULER] K-Fold: CosineAnnealing(T_max=25)
+/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:473: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler() if cfg["train"].get("mixed_precision", True) else None
+2025-09-10 21:44:32 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:44:32 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:44:32 | [HighPerfDataset] size=785 img_size=384 epoch=0/25 p_hard=0.200 is_train=True
+2025-09-10 21:44:32 | [HighPerfDataset] size=785 img_size=384 epoch=0/25 p_hard=0.000 is_train=False
+2025-09-10 21:44:32 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:44:32 | [HighPerfDataset] updated epoch=1, p_hard=0.212
+2025-09-10 21:44:32 | [EPOCH 1] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 1:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:44:33 | [EPOCH 1][TRAIN step 1/50] loss=2.96668 lr=0.000018 bs=16
+Train Epoch 1:   2%|▌                             | 1/50 [00:01<01:03,  1.30s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 1: 100%|█████████████████████████████| 50/50 [00:16<00:00,  3.01it/s]
+2025-09-10 21:44:49 | [EPOCH 1][TRAIN step 50/50] loss=2.47266 lr=0.000018 bs=1
+2025-09-10 21:44:49 | [EPOCH 1] <<< TRAIN end | loss=2.57867
+2025-09-10 21:44:49 | [EPOCH 1] >>> VALID start | steps=50
+Valid Epoch 1: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.27it/s]
+2025-09-10 21:45:00 | [EPOCH 1] <<< VALID end | loss=1.84489 macro_f1=0.42643
+2025-09-10 21:45:04 | [FOLD 1] NEW BEST F1: 0.42643 (epoch 1)
+2025-09-10 21:45:04 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:45:04 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:45:04 | [HighPerfDataset] size=785 img_size=384 epoch=1/25 p_hard=0.212 is_train=True
+2025-09-10 21:45:04 | [HighPerfDataset] size=785 img_size=384 epoch=1/25 p_hard=0.000 is_train=False
+2025-09-10 21:45:04 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:45:04 | [HighPerfDataset] updated epoch=2, p_hard=0.224
+2025-09-10 21:45:04 | [EPOCH 2] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 2:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:45:05 | [EPOCH 2][TRAIN step 1/50] loss=2.20776 lr=0.000017 bs=16
+Train Epoch 2:   2%|▌                             | 1/50 [00:01<01:15,  1.53s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 2: 100%|█████████████████████████████| 50/50 [00:17<00:00,  2.88it/s]
+2025-09-10 21:45:21 | [EPOCH 2][TRAIN step 50/50] loss=1.58691 lr=0.000017 bs=1
+2025-09-10 21:45:21 | [EPOCH 2] <<< TRAIN end | loss=1.92819
+2025-09-10 21:45:21 | [EPOCH 2] >>> VALID start | steps=50
+Valid Epoch 2: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.21it/s]
+2025-09-10 21:45:33 | [EPOCH 2] <<< VALID end | loss=1.21904 macro_f1=0.59051
+2025-09-10 21:45:37 | [FOLD 1] NEW BEST F1: 0.59051 (epoch 2)
+2025-09-10 21:45:37 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:45:37 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:45:37 | [HighPerfDataset] size=785 img_size=384 epoch=2/25 p_hard=0.224 is_train=True
+2025-09-10 21:45:37 | [HighPerfDataset] size=785 img_size=384 epoch=2/25 p_hard=0.000 is_train=False
+2025-09-10 21:45:37 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:45:37 | [HighPerfDataset] updated epoch=3, p_hard=0.236
+2025-09-10 21:45:37 | [EPOCH 3] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 3:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:45:38 | [EPOCH 3][TRAIN step 1/50] loss=1.31352 lr=0.000017 bs=16
+Train Epoch 3:   4%|█▏                            | 2/50 [00:01<00:34,  1.41it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 3: 100%|█████████████████████████████| 50/50 [00:16<00:00,  2.99it/s]
+2025-09-10 21:45:54 | [EPOCH 3][TRAIN step 50/50] loss=0.05048 lr=0.000017 bs=1
+2025-09-10 21:45:54 | [EPOCH 3] <<< TRAIN end | loss=1.49832
+2025-09-10 21:45:54 | [EPOCH 3] >>> VALID start | steps=50
+Valid Epoch 3: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.22it/s]
+2025-09-10 21:46:06 | [EPOCH 3] <<< VALID end | loss=0.80066 macro_f1=0.72102
+2025-09-10 21:46:10 | [FOLD 1] NEW BEST F1: 0.72102 (epoch 3)
+2025-09-10 21:46:10 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:46:10 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:46:10 | [HighPerfDataset] size=785 img_size=384 epoch=3/25 p_hard=0.236 is_train=True
+2025-09-10 21:46:10 | [HighPerfDataset] size=785 img_size=384 epoch=3/25 p_hard=0.000 is_train=False
+2025-09-10 21:46:10 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:46:10 | [HighPerfDataset] updated epoch=4, p_hard=0.248
+2025-09-10 21:46:10 | [EPOCH 4] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 4:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:46:11 | [EPOCH 4][TRAIN step 1/50] loss=1.00087 lr=0.000017 bs=16
+Train Epoch 4:   8%|██▍                           | 4/50 [00:02<00:20,  2.25it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 4: 100%|█████████████████████████████| 50/50 [00:16<00:00,  3.02it/s]
+2025-09-10 21:46:26 | [EPOCH 4][TRAIN step 50/50] loss=2.95898 lr=0.000017 bs=1
+2025-09-10 21:46:26 | [EPOCH 4] <<< TRAIN end | loss=1.27461
+2025-09-10 21:46:26 | [EPOCH 4] >>> VALID start | steps=50
+Valid Epoch 4: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.19it/s]
+2025-09-10 21:46:38 | [EPOCH 4] <<< VALID end | loss=0.58395 macro_f1=0.81630
+2025-09-10 21:46:42 | [FOLD 1] NEW BEST F1: 0.81630 (epoch 4)
+2025-09-10 21:46:42 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:46:42 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:46:42 | [HighPerfDataset] size=785 img_size=384 epoch=4/25 p_hard=0.248 is_train=True
+2025-09-10 21:46:42 | [HighPerfDataset] size=785 img_size=384 epoch=4/25 p_hard=0.000 is_train=False
+2025-09-10 21:46:42 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:46:42 | [HighPerfDataset] updated epoch=5, p_hard=0.260
+2025-09-10 21:46:42 | [EPOCH 5] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 5:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:46:43 | [EPOCH 5][TRAIN step 1/50] loss=1.10796 lr=0.000016 bs=16
+Train Epoch 5:   6%|█▊                            | 3/50 [00:02<00:26,  1.78it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 5: 100%|█████████████████████████████| 50/50 [00:16<00:00,  3.00it/s]
+2025-09-10 21:46:59 | [EPOCH 5][TRAIN step 50/50] loss=1.17383 lr=0.000016 bs=1
+2025-09-10 21:46:59 | [EPOCH 5] <<< TRAIN end | loss=1.10541
+2025-09-10 21:46:59 | [EPOCH 5] >>> VALID start | steps=50
+Valid Epoch 5: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.19it/s]
+2025-09-10 21:47:11 | [EPOCH 5] <<< VALID end | loss=0.46993 macro_f1=0.83838
+2025-09-10 21:47:14 | [FOLD 1] NEW BEST F1: 0.83838 (epoch 5)
+2025-09-10 21:47:14 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:47:14 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:47:14 | [HighPerfDataset] size=785 img_size=384 epoch=5/25 p_hard=0.260 is_train=True
+2025-09-10 21:47:14 | [HighPerfDataset] size=785 img_size=384 epoch=5/25 p_hard=0.000 is_train=False
+2025-09-10 21:47:14 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:47:14 | [HighPerfDataset] updated epoch=6, p_hard=0.272
+2025-09-10 21:47:14 | [EPOCH 6] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 6:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:47:16 | [EPOCH 6][TRAIN step 1/50] loss=0.89351 lr=0.000016 bs=16
+Train Epoch 6:   4%|█▏                            | 2/50 [00:01<00:34,  1.39it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 6: 100%|█████████████████████████████| 50/50 [00:16<00:00,  2.99it/s]
+2025-09-10 21:47:31 | [EPOCH 6][TRAIN step 50/50] loss=0.05756 lr=0.000016 bs=1
+2025-09-10 21:47:31 | [EPOCH 6] <<< TRAIN end | loss=0.88260
+2025-09-10 21:47:31 | [EPOCH 6] >>> VALID start | steps=50
+Valid Epoch 6: 100%|█████████████████████████████| 50/50 [00:12<00:00,  4.16it/s]
+2025-09-10 21:47:43 | [EPOCH 6] <<< VALID end | loss=0.42124 macro_f1=0.84586
+2025-09-10 21:47:47 | [FOLD 1] NEW BEST F1: 0.84586 (epoch 6)
+2025-09-10 21:47:47 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:47:47 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:47:47 | [HighPerfDataset] size=785 img_size=384 epoch=6/25 p_hard=0.272 is_train=True
+2025-09-10 21:47:47 | [HighPerfDataset] size=785 img_size=384 epoch=6/25 p_hard=0.000 is_train=False
+2025-09-10 21:47:47 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:47:47 | [HighPerfDataset] updated epoch=7, p_hard=0.284
+2025-09-10 21:47:47 | [EPOCH 7] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 7:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:47:49 | [EPOCH 7][TRAIN step 1/50] loss=0.46092 lr=0.000015 bs=16
+Train Epoch 7:   4%|█▏                            | 2/50 [00:01<00:38,  1.24it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 7: 100%|█████████████████████████████| 50/50 [00:17<00:00,  2.86it/s]
+2025-09-10 21:48:05 | [EPOCH 7][TRAIN step 50/50] loss=0.35474 lr=0.000015 bs=1
+2025-09-10 21:48:05 | [EPOCH 7] <<< TRAIN end | loss=0.89434
+2025-09-10 21:48:05 | [EPOCH 7] >>> VALID start | steps=50
+Valid Epoch 7: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.18it/s]
+2025-09-10 21:48:17 | [EPOCH 7] <<< VALID end | loss=0.39572 macro_f1=0.83608
+2025-09-10 21:48:17 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:48:17 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:48:17 | [HighPerfDataset] size=785 img_size=384 epoch=7/25 p_hard=0.284 is_train=True
+2025-09-10 21:48:17 | [HighPerfDataset] size=785 img_size=384 epoch=7/25 p_hard=0.000 is_train=False
+2025-09-10 21:48:17 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:48:17 | [HighPerfDataset] updated epoch=8, p_hard=0.296
+2025-09-10 21:48:17 | [EPOCH 8] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 8:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:48:18 | [EPOCH 8][TRAIN step 1/50] loss=1.28117 lr=0.000014 bs=16
+Train Epoch 8:   4%|█▏                            | 2/50 [00:01<00:32,  1.46it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 8: 100%|█████████████████████████████| 50/50 [00:16<00:00,  3.01it/s]
+2025-09-10 21:48:33 | [EPOCH 8][TRAIN step 50/50] loss=0.04755 lr=0.000014 bs=1
+2025-09-10 21:48:33 | [EPOCH 8] <<< TRAIN end | loss=0.81974
+2025-09-10 21:48:33 | [EPOCH 8] >>> VALID start | steps=50
+Valid Epoch 8: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.26it/s]
+2025-09-10 21:48:45 | [EPOCH 8] <<< VALID end | loss=0.37532 macro_f1=0.82756
+2025-09-10 21:48:45 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:48:45 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:48:45 | [HighPerfDataset] size=785 img_size=384 epoch=8/25 p_hard=0.296 is_train=True
+2025-09-10 21:48:45 | [HighPerfDataset] size=785 img_size=384 epoch=8/25 p_hard=0.000 is_train=False
+2025-09-10 21:48:45 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:48:45 | [HighPerfDataset] updated epoch=9, p_hard=0.308
+2025-09-10 21:48:45 | [EPOCH 9] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 9:   0%|                                      | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:48:46 | [EPOCH 9][TRAIN step 1/50] loss=0.92099 lr=0.000013 bs=16
+Train Epoch 9:   2%|▌                             | 1/50 [00:01<00:56,  1.15s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 9: 100%|█████████████████████████████| 50/50 [00:16<00:00,  3.06it/s]
+2025-09-10 21:49:01 | [EPOCH 9][TRAIN step 50/50] loss=0.02698 lr=0.000013 bs=1
+2025-09-10 21:49:01 | [EPOCH 9] <<< TRAIN end | loss=0.78315
+2025-09-10 21:49:01 | [EPOCH 9] >>> VALID start | steps=50
+Valid Epoch 9: 100%|█████████████████████████████| 50/50 [00:11<00:00,  4.28it/s]
+2025-09-10 21:49:13 | [EPOCH 9] <<< VALID end | loss=0.30467 macro_f1=0.87079
+2025-09-10 21:49:17 | [FOLD 1] NEW BEST F1: 0.87079 (epoch 9)
+2025-09-10 21:49:17 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:49:17 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:49:17 | [HighPerfDataset] size=785 img_size=384 epoch=9/25 p_hard=0.308 is_train=True
+2025-09-10 21:49:17 | [HighPerfDataset] size=785 img_size=384 epoch=9/25 p_hard=0.000 is_train=False
+2025-09-10 21:49:17 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:49:17 | [HighPerfDataset] updated epoch=10, p_hard=0.320
+2025-09-10 21:49:17 | [EPOCH 10] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 10:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:49:18 | [EPOCH 10][TRAIN step 1/50] loss=1.26849 lr=0.000012 bs=16
+Train Epoch 10:   2%|▌                            | 1/50 [00:01<01:04,  1.31s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 10: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.97it/s]
+2025-09-10 21:49:33 | [EPOCH 10][TRAIN step 50/50] loss=0.01472 lr=0.000012 bs=1
+2025-09-10 21:49:33 | [EPOCH 10] <<< TRAIN end | loss=0.89851
+2025-09-10 21:49:33 | [EPOCH 10] >>> VALID start | steps=50
+Valid Epoch 10: 100%|████████████████████████████| 50/50 [00:12<00:00,  4.12it/s]
+2025-09-10 21:49:46 | [EPOCH 10] <<< VALID end | loss=0.32570 macro_f1=0.88191
+2025-09-10 21:49:49 | [FOLD 1] NEW BEST F1: 0.88191 (epoch 10)
+2025-09-10 21:49:49 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:49:49 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:49:49 | [HighPerfDataset] size=785 img_size=384 epoch=10/25 p_hard=0.320 is_train=True
+2025-09-10 21:49:49 | [HighPerfDataset] size=785 img_size=384 epoch=10/25 p_hard=0.000 is_train=False
+2025-09-10 21:49:49 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:49:49 | [HighPerfDataset] updated epoch=11, p_hard=0.332
+2025-09-10 21:49:49 | [EPOCH 11] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 11:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:49:51 | [EPOCH 11][TRAIN step 1/50] loss=0.98981 lr=0.000011 bs=16
+Train Epoch 11:   4%|█▏                           | 2/50 [00:01<00:35,  1.34it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 11: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.95it/s]
+2025-09-10 21:50:06 | [EPOCH 11][TRAIN step 50/50] loss=0.05276 lr=0.000011 bs=1
+2025-09-10 21:50:06 | [EPOCH 11] <<< TRAIN end | loss=0.86302
+2025-09-10 21:50:06 | [EPOCH 11] >>> VALID start | steps=50
+Valid Epoch 11: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.24it/s]
+2025-09-10 21:50:18 | [EPOCH 11] <<< VALID end | loss=0.30107 macro_f1=0.88030
+2025-09-10 21:50:18 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:50:18 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:50:18 | [HighPerfDataset] size=785 img_size=384 epoch=11/25 p_hard=0.332 is_train=True
+2025-09-10 21:50:18 | [HighPerfDataset] size=785 img_size=384 epoch=11/25 p_hard=0.000 is_train=False
+2025-09-10 21:50:18 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:50:18 | [HighPerfDataset] updated epoch=12, p_hard=0.344
+2025-09-10 21:50:18 | [EPOCH 12] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 12:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:50:19 | [EPOCH 12][TRAIN step 1/50] loss=1.71464 lr=0.000010 bs=16
+Train Epoch 12:   8%|██▎                          | 4/50 [00:02<00:19,  2.36it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 12: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.99it/s]
+2025-09-10 21:50:35 | [EPOCH 12][TRAIN step 50/50] loss=0.02278 lr=0.000010 bs=1
+2025-09-10 21:50:35 | [EPOCH 12] <<< TRAIN end | loss=0.89247
+2025-09-10 21:50:35 | [EPOCH 12] >>> VALID start | steps=50
+Valid Epoch 12: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.22it/s]
+2025-09-10 21:50:47 | [EPOCH 12] <<< VALID end | loss=0.29031 macro_f1=0.86325
+2025-09-10 21:50:47 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:50:47 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:50:47 | [HighPerfDataset] size=785 img_size=384 epoch=12/25 p_hard=0.344 is_train=True
+2025-09-10 21:50:47 | [HighPerfDataset] size=785 img_size=384 epoch=12/25 p_hard=0.000 is_train=False
+2025-09-10 21:50:47 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:50:47 | [HighPerfDataset] updated epoch=13, p_hard=0.356
+2025-09-10 21:50:47 | [EPOCH 13] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 13:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:50:48 | [EPOCH 13][TRAIN step 1/50] loss=0.41887 lr=0.000009 bs=16
+Train Epoch 13:   2%|▌                            | 1/50 [00:01<00:52,  1.06s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 13: 100%|████████████████████████████| 50/50 [00:16<00:00,  3.02it/s]
+2025-09-10 21:51:03 | [EPOCH 13][TRAIN step 50/50] loss=0.17529 lr=0.000009 bs=1
+2025-09-10 21:51:03 | [EPOCH 13] <<< TRAIN end | loss=0.70394
+2025-09-10 21:51:03 | [EPOCH 13] >>> VALID start | steps=50
+Valid Epoch 13: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.21it/s]
+2025-09-10 21:51:15 | [EPOCH 13] <<< VALID end | loss=0.27405 macro_f1=0.87442
+2025-09-10 21:51:15 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:51:15 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:51:15 | [HighPerfDataset] size=785 img_size=384 epoch=13/25 p_hard=0.356 is_train=True
+2025-09-10 21:51:15 | [HighPerfDataset] size=785 img_size=384 epoch=13/25 p_hard=0.000 is_train=False
+2025-09-10 21:51:15 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:51:15 | [HighPerfDataset] updated epoch=14, p_hard=0.368
+2025-09-10 21:51:15 | [EPOCH 14] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 14:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:51:16 | [EPOCH 14][TRAIN step 1/50] loss=0.90456 lr=0.000008 bs=16
+Train Epoch 14:   2%|▌                            | 1/50 [00:01<00:53,  1.10s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 14: 100%|████████████████████████████| 50/50 [00:16<00:00,  3.01it/s]
+2025-09-10 21:51:32 | [EPOCH 14][TRAIN step 50/50] loss=0.01337 lr=0.000008 bs=1
+2025-09-10 21:51:32 | [EPOCH 14] <<< TRAIN end | loss=0.67463
+2025-09-10 21:51:32 | [EPOCH 14] >>> VALID start | steps=50
+Valid Epoch 14: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.19it/s]
+2025-09-10 21:51:44 | [EPOCH 14] <<< VALID end | loss=0.26586 macro_f1=0.88479
+2025-09-10 21:51:48 | [FOLD 1] NEW BEST F1: 0.88479 (epoch 14)
+2025-09-10 21:51:48 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:51:48 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:51:48 | [HighPerfDataset] size=785 img_size=384 epoch=14/25 p_hard=0.368 is_train=True
+2025-09-10 21:51:48 | [HighPerfDataset] size=785 img_size=384 epoch=14/25 p_hard=0.000 is_train=False
+2025-09-10 21:51:48 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:51:48 | [HighPerfDataset] updated epoch=15, p_hard=0.380
+2025-09-10 21:51:48 | [EPOCH 15] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 15:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:51:49 | [EPOCH 15][TRAIN step 1/50] loss=1.34422 lr=0.000007 bs=16
+Train Epoch 15:   2%|▌                            | 1/50 [00:01<01:13,  1.49s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 15: 100%|████████████████████████████| 50/50 [00:17<00:00,  2.93it/s]
+2025-09-10 21:52:05 | [EPOCH 15][TRAIN step 50/50] loss=0.02287 lr=0.000007 bs=1
+2025-09-10 21:52:05 | [EPOCH 15] <<< TRAIN end | loss=0.69709
+2025-09-10 21:52:05 | [EPOCH 15] >>> VALID start | steps=50
+Valid Epoch 15: 100%|████████████████████████████| 50/50 [00:12<00:00,  4.16it/s]
+2025-09-10 21:52:17 | [EPOCH 15] <<< VALID end | loss=0.25816 macro_f1=0.88433
+2025-09-10 21:52:17 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:52:17 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:52:17 | [HighPerfDataset] size=785 img_size=384 epoch=15/25 p_hard=0.380 is_train=True
+2025-09-10 21:52:17 | [HighPerfDataset] size=785 img_size=384 epoch=15/25 p_hard=0.000 is_train=False
+2025-09-10 21:52:17 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:52:17 | [HighPerfDataset] updated epoch=16, p_hard=0.392
+2025-09-10 21:52:17 | [EPOCH 16] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 16:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:52:18 | [EPOCH 16][TRAIN step 1/50] loss=0.93190 lr=0.000006 bs=16
+Train Epoch 16:   4%|█▏                           | 2/50 [00:01<00:32,  1.46it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 16: 100%|████████████████████████████| 50/50 [00:16<00:00,  3.00it/s]
+2025-09-10 21:52:33 | [EPOCH 16][TRAIN step 50/50] loss=1.06934 lr=0.000006 bs=1
+2025-09-10 21:52:33 | [EPOCH 16] <<< TRAIN end | loss=0.71377
+2025-09-10 21:52:33 | [EPOCH 16] >>> VALID start | steps=50
+Valid Epoch 16: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.29it/s]
+2025-09-10 21:52:45 | [EPOCH 16] <<< VALID end | loss=0.25631 macro_f1=0.88292
+2025-09-10 21:52:45 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:52:45 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:52:45 | [HighPerfDataset] size=785 img_size=384 epoch=16/25 p_hard=0.392 is_train=True
+2025-09-10 21:52:45 | [HighPerfDataset] size=785 img_size=384 epoch=16/25 p_hard=0.000 is_train=False
+2025-09-10 21:52:45 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:52:45 | [HighPerfDataset] updated epoch=17, p_hard=0.404
+2025-09-10 21:52:45 | [EPOCH 17] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 17:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:52:46 | [EPOCH 17][TRAIN step 1/50] loss=0.44042 lr=0.000005 bs=16
+Train Epoch 17:   2%|▌                            | 1/50 [00:01<01:01,  1.25s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 17: 100%|████████████████████████████| 50/50 [00:16<00:00,  3.02it/s]
+2025-09-10 21:53:02 | [EPOCH 17][TRAIN step 50/50] loss=0.00793 lr=0.000005 bs=1
+2025-09-10 21:53:02 | [EPOCH 17] <<< TRAIN end | loss=0.68747
+2025-09-10 21:53:02 | [EPOCH 17] >>> VALID start | steps=50
+Valid Epoch 17: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.20it/s]
+2025-09-10 21:53:14 | [EPOCH 17] <<< VALID end | loss=0.25044 macro_f1=0.88624
+2025-09-10 21:53:18 | [FOLD 1] NEW BEST F1: 0.88624 (epoch 17)
+2025-09-10 21:53:18 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:53:18 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:53:18 | [HighPerfDataset] size=785 img_size=384 epoch=17/25 p_hard=0.404 is_train=True
+2025-09-10 21:53:18 | [HighPerfDataset] size=785 img_size=384 epoch=17/25 p_hard=0.000 is_train=False
+2025-09-10 21:53:18 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:53:18 | [HighPerfDataset] updated epoch=18, p_hard=0.416
+2025-09-10 21:53:18 | [EPOCH 18] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 18:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:53:19 | [EPOCH 18][TRAIN step 1/50] loss=0.85431 lr=0.000004 bs=16
+Train Epoch 18:   2%|▌                            | 1/50 [00:01<01:09,  1.41s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 18: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.98it/s]
+2025-09-10 21:53:34 | [EPOCH 18][TRAIN step 50/50] loss=1.44824 lr=0.000004 bs=1
+2025-09-10 21:53:35 | [EPOCH 18] <<< TRAIN end | loss=0.67580
+2025-09-10 21:53:35 | [EPOCH 18] >>> VALID start | steps=50
+Valid Epoch 18: 100%|████████████████████████████| 50/50 [00:12<00:00,  4.15it/s]
+2025-09-10 21:53:47 | [EPOCH 18] <<< VALID end | loss=0.24384 macro_f1=0.89317
+2025-09-10 21:53:50 | [FOLD 1] NEW BEST F1: 0.89317 (epoch 18)
+2025-09-10 21:53:50 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:53:50 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:53:50 | [HighPerfDataset] size=785 img_size=384 epoch=18/25 p_hard=0.416 is_train=True
+2025-09-10 21:53:50 | [HighPerfDataset] size=785 img_size=384 epoch=18/25 p_hard=0.000 is_train=False
+2025-09-10 21:53:50 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:53:50 | [HighPerfDataset] updated epoch=19, p_hard=0.428
+2025-09-10 21:53:50 | [EPOCH 19] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 19:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:53:51 | [EPOCH 19][TRAIN step 1/50] loss=1.43192 lr=0.000003 bs=16
+Train Epoch 19:   2%|▌                            | 1/50 [00:01<01:07,  1.38s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 19: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.96it/s]
+2025-09-10 21:54:07 | [EPOCH 19][TRAIN step 50/50] loss=0.00523 lr=0.000003 bs=1
+2025-09-10 21:54:07 | [EPOCH 19] <<< TRAIN end | loss=0.62293
+2025-09-10 21:54:07 | [EPOCH 19] >>> VALID start | steps=50
+Valid Epoch 19: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.18it/s]
+2025-09-10 21:54:19 | [EPOCH 19] <<< VALID end | loss=0.23523 macro_f1=0.89449
+2025-09-10 21:54:22 | [FOLD 1] NEW BEST F1: 0.89449 (epoch 19)
+2025-09-10 21:54:22 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:54:22 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:54:22 | [HighPerfDataset] size=785 img_size=384 epoch=19/25 p_hard=0.428 is_train=True
+2025-09-10 21:54:22 | [HighPerfDataset] size=785 img_size=384 epoch=19/25 p_hard=0.000 is_train=False
+2025-09-10 21:54:22 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:54:22 | [HighPerfDataset] updated epoch=20, p_hard=0.440
+2025-09-10 21:54:22 | [EPOCH 20] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 20:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:54:24 | [EPOCH 20][TRAIN step 1/50] loss=0.40580 lr=0.000002 bs=16
+Train Epoch 20:   6%|█▋                           | 3/50 [00:02<00:26,  1.79it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 20: 100%|████████████████████████████| 50/50 [00:16<00:00,  3.03it/s]
+2025-09-10 21:54:39 | [EPOCH 20][TRAIN step 50/50] loss=0.21228 lr=0.000002 bs=1
+2025-09-10 21:54:39 | [EPOCH 20] <<< TRAIN end | loss=0.64827
+2025-09-10 21:54:39 | [EPOCH 20] >>> VALID start | steps=50
+Valid Epoch 20: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.23it/s]
+2025-09-10 21:54:51 | [EPOCH 20] <<< VALID end | loss=0.23615 macro_f1=0.88958
+2025-09-10 21:54:51 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:54:51 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:54:51 | [HighPerfDataset] size=785 img_size=384 epoch=20/25 p_hard=0.440 is_train=True
+2025-09-10 21:54:51 | [HighPerfDataset] size=785 img_size=384 epoch=20/25 p_hard=0.000 is_train=False
+2025-09-10 21:54:51 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:54:51 | [HighPerfDataset] updated epoch=21, p_hard=0.452
+2025-09-10 21:54:51 | [EPOCH 21] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 21:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:54:52 | [EPOCH 21][TRAIN step 1/50] loss=0.08537 lr=0.000002 bs=16
+Train Epoch 21:   2%|▌                            | 1/50 [00:01<00:55,  1.13s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 21: 100%|████████████████████████████| 50/50 [00:16<00:00,  3.06it/s]
+2025-09-10 21:55:07 | [EPOCH 21][TRAIN step 50/50] loss=0.00541 lr=0.000002 bs=1
+2025-09-10 21:55:07 | [EPOCH 21] <<< TRAIN end | loss=0.73246
+2025-09-10 21:55:07 | [EPOCH 21] >>> VALID start | steps=50
+Valid Epoch 21: 100%|████████████████████████████| 50/50 [00:12<00:00,  4.13it/s]
+2025-09-10 21:55:19 | [EPOCH 21] <<< VALID end | loss=0.23580 macro_f1=0.89398
+2025-09-10 21:55:19 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:55:19 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:55:19 | [HighPerfDataset] size=785 img_size=384 epoch=21/25 p_hard=0.452 is_train=True
+2025-09-10 21:55:19 | [HighPerfDataset] size=785 img_size=384 epoch=21/25 p_hard=0.000 is_train=False
+2025-09-10 21:55:19 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:55:19 | [HighPerfDataset] updated epoch=22, p_hard=0.464
+2025-09-10 21:55:19 | [EPOCH 22] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 22:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:55:20 | [EPOCH 22][TRAIN step 1/50] loss=0.28354 lr=0.000001 bs=16
+Train Epoch 22:  12%|███▍                         | 6/50 [00:02<00:16,  2.73it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 22: 100%|████████████████████████████| 50/50 [00:16<00:00,  3.02it/s]
+2025-09-10 21:55:36 | [EPOCH 22][TRAIN step 50/50] loss=0.00997 lr=0.000001 bs=1
+2025-09-10 21:55:36 | [EPOCH 22] <<< TRAIN end | loss=0.67395
+2025-09-10 21:55:36 | [EPOCH 22] >>> VALID start | steps=50
+Valid Epoch 22: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.23it/s]
+2025-09-10 21:55:47 | [EPOCH 22] <<< VALID end | loss=0.23487 macro_f1=0.88778
+2025-09-10 21:55:47 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:55:47 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:55:47 | [HighPerfDataset] size=785 img_size=384 epoch=22/25 p_hard=0.464 is_train=True
+2025-09-10 21:55:48 | [HighPerfDataset] size=785 img_size=384 epoch=22/25 p_hard=0.000 is_train=False
+2025-09-10 21:55:48 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:55:48 | [HighPerfDataset] updated epoch=23, p_hard=0.476
+2025-09-10 21:55:48 | [EPOCH 23] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 23:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:55:49 | [EPOCH 23][TRAIN step 1/50] loss=1.46018 lr=0.000001 bs=16
+Train Epoch 23:  14%|████                         | 7/50 [00:03<00:15,  2.79it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 23: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.99it/s]
+2025-09-10 21:56:04 | [EPOCH 23][TRAIN step 50/50] loss=0.01872 lr=0.000001 bs=1
+2025-09-10 21:56:04 | [EPOCH 23] <<< TRAIN end | loss=0.70886
+2025-09-10 21:56:04 | [EPOCH 23] >>> VALID start | steps=50
+Valid Epoch 23: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.24it/s]
+2025-09-10 21:56:16 | [EPOCH 23] <<< VALID end | loss=0.23521 macro_f1=0.89306
+2025-09-10 21:56:16 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:56:16 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:56:16 | [HighPerfDataset] size=785 img_size=384 epoch=23/25 p_hard=0.476 is_train=True
+2025-09-10 21:56:16 | [HighPerfDataset] size=785 img_size=384 epoch=23/25 p_hard=0.000 is_train=False
+2025-09-10 21:56:16 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:56:16 | [HighPerfDataset] updated epoch=24, p_hard=0.488
+2025-09-10 21:56:16 | [EPOCH 24] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 24:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+2025-09-10 21:56:17 | [EPOCH 24][TRAIN step 1/50] loss=0.37649 lr=0.000000 bs=16
+Train Epoch 24:   2%|▌                            | 1/50 [00:01<00:58,  1.19s/it]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+Train Epoch 24: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.97it/s]
+2025-09-10 21:56:33 | [EPOCH 24][TRAIN step 50/50] loss=0.44385 lr=0.000000 bs=1
+2025-09-10 21:56:33 | [EPOCH 24] <<< TRAIN end | loss=0.86591
+2025-09-10 21:56:33 | [EPOCH 24] >>> VALID start | steps=50
+Valid Epoch 24: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.25it/s]
+2025-09-10 21:56:45 | [EPOCH 24] <<< VALID end | loss=0.23552 macro_f1=0.89484
+2025-09-10 21:56:49 | [FOLD 1] NEW BEST F1: 0.89484 (epoch 24)
+2025-09-10 21:56:49 | [DATA] build highperf loaders | img_size=384 bs=16
+2025-09-10 21:56:49 | [DATA] augmentation: baseline-advanced (normal + hard augmentation)
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/blur/transforms.py:184: UserWarning: blur_limit and sigma_limit minimum value can not be both equal to 0. blur_limit minimum value changed to 3.
+  warnings.warn(
+/home/ieyeppo/.pyenv/versions/cv_py3_11_9/lib/python3.11/site-packages/albumentations/augmentations/transforms.py:311: FutureWarning: JpegCompression has been deprecated. Please use ImageCompression
+  warnings.warn(
+2025-09-10 21:56:49 | [HighPerfDataset] size=785 img_size=384 epoch=24/25 p_hard=0.488 is_train=True
+2025-09-10 21:56:49 | [HighPerfDataset] size=785 img_size=384 epoch=24/25 p_hard=0.000 is_train=False
+2025-09-10 21:56:49 | [DATA] dataset sizes | train=785 valid=785
+2025-09-10 21:56:49 | [HighPerfDataset] updated epoch=25, p_hard=0.500
+2025-09-10 21:56:49 | [EPOCH 25] >>> TRAIN start | steps=50 mixup=True
+Train Epoch 25:   0%|                                     | 0/50 [00:00<?, ?it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:83: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):
+2025-09-10 21:56:50 | [EPOCH 25][TRAIN step 1/50] loss=1.46031 lr=0.000000 bs=16
+Train Epoch 25:   6%|█▋                           | 3/50 [00:02<00:26,  1.77it/s]/home/ieyeppo/AI_Lab/computer-vision-competition-1SEN/src/training/train_highperf.py:91: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=scaler is not None):      # AMP 자동 캐스팅 적용
+Train Epoch 25: 100%|████████████████████████████| 50/50 [00:16<00:00,  2.97it/s]
+2025-09-10 21:57:06 | [EPOCH 25][TRAIN step 50/50] loss=0.49121 lr=0.000000 bs=1
+2025-09-10 21:57:06 | [EPOCH 25] <<< TRAIN end | loss=0.70975
+2025-09-10 21:57:06 | [EPOCH 25] >>> VALID start | steps=50
+Valid Epoch 25: 100%|████████████████████████████| 50/50 [00:11<00:00,  4.29it/s]
+2025-09-10 21:57:17 | [EPOCH 25] <<< VALID end | loss=0.23536 macro_f1=0.89599
+2025-09-10 21:57:21 | [FOLD 1] NEW BEST F1: 0.89599 (epoch 25)
+2025-09-10 21:57:21 | [FOLD 1] COMPLETED | Best F1: 0.89599
